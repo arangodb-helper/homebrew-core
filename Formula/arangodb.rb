@@ -35,6 +35,7 @@ class Arangodb < Formula
         -DCMAKE_INSTALL_DATAROOTDIR=#{share}
         -DCMAKE_INSTALL_SYSCONFDIR=#{etc}
         -DCMAKE_INSTALL_LOCALSTATEDIR=#{var}
+        -DCMAKE_OSX_DEPLOYMENT_TARGET=#{MacOS.version}
       ]
 
       if ENV.compiler == "gcc-6"
